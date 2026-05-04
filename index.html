@@ -1448,20 +1448,35 @@ document.addEventListener('DOMContentLoaded', initScrollAnimations);
   const splash = document.getElementById('splash-intro');
   const introVideo = document.getElementById('intro-video');
   if (!splash || !introVideo) return;
+  var dismissed = false;
 
   function dismissSplash() {
+    if (dismissed) return;
+    dismissed = true;
     splash.classList.add('fade-out');
     document.body.classList.remove('splash-active');
-    setTimeout(() => splash.remove(), 800);
+    setTimeout(function() { splash.remove(); }, 800);
   }
 
   introVideo.addEventListener('ended', dismissSplash);
 
-  // Allow click to skip the intro
+  // Allow tap to skip the intro
   splash.addEventListener('click', dismissSplash);
 
-  // Safety fallback — dismiss after 14s in case video stalls
-  setTimeout(dismissSplash, 14000);
+  // Try to play — if autoplay is blocked, skip intro immediately
+  var playPromise = introVideo.play();
+  if (playPromise !== undefined) {
+    playPromise.then(function() {
+      // Video is playing — dismiss when it ends or after 10s max
+      setTimeout(dismissSplash, 10000);
+    }).catch(function() {
+      // Autoplay blocked (mobile/in-app browsers) — skip intro
+      dismissSplash();
+    });
+  } else {
+    // Fallback for older browsers
+    setTimeout(dismissSplash, 3000);
+  }
 })();
 </script>
 </body>
