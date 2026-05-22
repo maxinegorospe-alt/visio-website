@@ -485,9 +485,11 @@ src="https://www.facebook.com/tr?id=806124832324167&ev=PageView&noscript=1"
   @media (max-width:1024px) {
     .services-grid, .bundle-grid { grid-template-columns: 1fr; max-width: 480px; margin-left: auto; margin-right: auto; }
     .team-grid { grid-template-columns: repeat(3,1fr); }
+    .retainer-steps { grid-template-columns: repeat(2,1fr) !important; max-width: 600px !important; }
   }
   @media (max-width:600px) {
     .team-grid { grid-template-columns: repeat(2,1fr); }
+    .retainer-steps { grid-template-columns: 1fr !important; max-width: 320px !important; }
   }
   @media (max-width:768px) {
     .navbar { padding: 0 20px; height: 64px; }
@@ -561,6 +563,7 @@ src="https://www.facebook.com/tr?id=806124832324167&ev=PageView&noscript=1"
     <a href="#" onclick="showPage('services')" id="nav-services">Services</a>
     <a href="#" onclick="showPage('works')" id="nav-works">Our Works</a>
     <a href="#" onclick="showPage('contact')" id="nav-contact">Contact Us</a>
+    <a href="#" onclick="showPage('retainer')" id="nav-retainer">Retainer Partners</a>
     <a href="https://calendly.com/thevisiostudios/30min" target="_blank" class="nav-cta">Book a Call</a>
   </div>
   <button class="nav-toggle" aria-label="Toggle navigation menu" onclick="document.querySelector('.nav-links').classList.toggle('show')"><span></span><span></span><span></span></button>
@@ -1220,6 +1223,264 @@ src="https://www.facebook.com/tr?id=806124832324167&ev=PageView&noscript=1"
     </div>
   </section>
 </div>
+
+<!-- ============================================================ -->
+<!-- PAGE: AGENCY PARTNERS (WHITE-LABEL RETAINER)                  -->
+<!-- ============================================================ -->
+<div class="page" id="page-retainer">
+  <div class="page-hero" style="background:linear-gradient(160deg, var(--dark) 0%, #2a2040 40%, var(--purple-deep) 100%); color:var(--white);">
+    <div class="section-label" style="color:var(--lilac);">White-Label Agency Partner Program</div>
+    <h2 class="section-title" style="color:var(--white);">Your Post-Production Team, On Demand</h2>
+    <div class="section-desc" style="color:rgba(255,255,255,0.7);">Premium video editing and AI-powered features at a fraction of US agency rates. Your clients never know we exist.</div>
+  </div>
+
+  <!-- STATS BAR -->
+  <section style="background:var(--dark);padding:32px 40px;">
+    <div class="container">
+      <div style="display:flex;justify-content:center;gap:48px;flex-wrap:wrap;">
+        <div style="text-align:center;"><div style="font-family:'Playfair Display',serif;font-weight:800;font-size:28px;color:var(--white);">1,000+</div><div style="font-size:12px;color:rgba(255,255,255,0.6);margin-top:4px;">Projects Delivered</div></div>
+        <div style="text-align:center;"><div style="font-family:'Playfair Display',serif;font-weight:800;font-size:28px;color:var(--white);">24–48hr</div><div style="font-size:12px;color:rgba(255,255,255,0.6);margin-top:4px;">Turnaround</div></div>
+        <div style="text-align:center;"><div style="font-family:'Playfair Display',serif;font-weight:800;font-size:28px;color:var(--white);">70%</div><div style="font-size:12px;color:rgba(255,255,255,0.6);margin-top:4px;">Below US Rates</div></div>
+        <div style="text-align:center;"><div style="font-family:'Playfair Display',serif;font-weight:800;font-size:28px;color:var(--white);">100%</div><div style="font-size:12px;color:rgba(255,255,255,0.6);margin-top:4px;">Client Retention</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RETAINER PLANS -->
+  <section class="section section-mid">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Agency Retainer Plans</div>
+        <h2 class="section-title">Scale Your Agency Without Hiring Editors</h2>
+        <div class="section-desc">All plans include premium-tier editing with color grading, motion graphics, licensed music, and professional sound design.</div>
+      </div>
+
+      <div class="bundle-grid">
+        <!-- STARTER -->
+        <div class="bundle-card">
+          <div class="bundle-header">
+            <div class="bundle-tier tier-s">STARTER</div>
+            <div class="bundle-name">Starter</div>
+            <div class="bundle-tagline">Build your editing pipeline with a reliable partner.</div>
+            <div class="bundle-price">$2,199<span class="bundle-period">/mo</span></div>
+            <div style="font-family:'Playfair Display',serif;font-weight:700;font-size:15px;color:var(--purple-deep);margin-top:8px;">20 videos/month</div>
+          </div>
+          <div class="bundle-body">
+            <div class="b-label">Video Breakdown</div>
+            <div class="b-item"><span class="ck">&#10003;</span><span class="tx"><strong>8</strong> Real Estate Listing Videos</span></div>
+            <div class="b-item"><span class="ck">&#10003;</span><span class="tx"><strong>2</strong> Video Ads</span></div>
+            <div class="b-item"><span class="ck">&#10003;</span><span class="tx"><strong>10</strong> Social Media Reels</span></div>
+            <div class="b-label">What's Included</div>
+            <div class="b-item"><span class="ck">&#10003;</span><span class="tx">Premium editing on every video</span></div>
+            <div class="b-item"><span class="ck">&#10003;</span><span class="tx">Color grading & sound design</span></div>
+            <div class="b-item"><span class="ck">&#10003;</span><span class="tx">Motion text & animated titles</span></div>
+            <div class="b-item"><span class="ck">&#10003;</span><span class="tx"><strong>24–48 hour</strong> turnaround</span></div>
+            <div class="b-item"><span class="ck">&#10003;</span><span class="tx"><strong>3 revisions</strong> per video</span></div>
+            <div class="b-item"><span class="ck">&#10003;</span><span class="tx">Shared editor</span></div>
+            <div class="b-item"><span class="ck">&#10003;</span><span class="tx">Monthly check-in call</span></div>
+            <div class="b-label">AI Features</div>
+            <div class="b-item"><span class="ck">&#10003;</span><span class="tx">AI Voiceover — <strong>1 credit</strong>/month</span></div>
+            <a href="https://calendly.com/thevisiostudios/30min" target="_blank" class="bundle-cta outline">Get Started &rarr;</a>
+          </div>
+        </div>
+
+        <!-- GROWTH -->
+        <div class="bundle-card featured">
+          <div class="bundle-header">
+            <div class="bundle-tier tier-g">GROWTH</div>
+            <div class="bundle-name">Growth</div>
+            <div class="bundle-tagline">Dedicated editor for agencies with steady client flow.</div>
+            <div class="bundle-price">$3,999<span class="bundle-period">/mo</span></div>
+            <div style="font-family:'Playfair Display',serif;font-weight:700;font-size:15px;color:var(--purple-deep);margin-top:8px;">39 videos/month</div>
+          </div>
+          <div class="bundle-body">
+            <div class="b-label">Video Breakdown</div>
+            <div class="b-item"><span class="ck">&#10003;</span><span class="tx"><strong>15</strong> Real Estate Listing Videos</span></div>
+            <div class="b-item"><span class="ck">&#10003;</span><span class="tx"><strong>4</strong> Video Ads</span></div>
+            <div class="b-item"><span class="ck">&#10003;</span><span class="tx"><strong>20</strong> Social Media Reels</span></div>
+            <div class="b-label">Everything in Starter, plus</div>
+            <div class="b-item"><span class="ck">&#10003;</span><span class="tx"><strong>Dedicated editor</strong> assigned to your account</span></div>
+            <div class="b-item"><span class="ck">&#10003;</span><span class="tx">Advanced motion graphics & text animations</span></div>
+            <div class="b-item"><span class="ck">&#10003;</span><span class="tx">Weekly Slack/comms access</span></div>
+            <div class="b-item"><span class="ck">&#10003;</span><span class="tx">Monthly strategy call (30 min)</span></div>
+            <div class="b-item"><span class="ck">&#10003;</span><span class="tx"><strong>Priority queue</strong></span></div>
+            <div class="b-label">AI Features</div>
+            <div class="b-item"><span class="ck">&#10003;</span><span class="tx">AI Voiceover — <strong>2 credits</strong>/month</span></div>
+            <div class="b-item"><span class="ck">&#10003;</span><span class="tx">AI Virtual Staging — <strong>2 credits</strong>/month</span></div>
+            <a href="https://calendly.com/thevisiostudios/30min" target="_blank" class="bundle-cta">Book a Strategy Call &rarr;</a>
+          </div>
+        </div>
+
+        <!-- SCALE -->
+        <div class="bundle-card">
+          <div class="bundle-header">
+            <div class="bundle-tier tier-p">SCALE</div>
+            <div class="bundle-name">Scale</div>
+            <div class="bundle-tagline">Your full outsourced editing department with unlimited AI.</div>
+            <div class="bundle-price">$6,999<span class="bundle-period">/mo</span></div>
+            <div style="font-family:'Playfair Display',serif;font-weight:700;font-size:15px;color:var(--purple-deep);margin-top:8px;">63 videos/month</div>
+            <div class="cc-save" style="margin-top:8px;">BEST VALUE</div>
+          </div>
+          <div class="bundle-body">
+            <div class="b-label">Video Breakdown</div>
+            <div class="b-item"><span class="ck">&#10003;</span><span class="tx"><strong>25</strong> Real Estate Listing Videos</span></div>
+            <div class="b-item"><span class="ck">&#10003;</span><span class="tx"><strong>8</strong> Video Ads</span></div>
+            <div class="b-item"><span class="ck">&#10003;</span><span class="tx"><strong>30</strong> Social Media Reels</span></div>
+            <div class="b-label">Everything in Growth, plus</div>
+            <div class="b-item"><span class="ck">&#10003;</span><span class="tx"><strong>Dedicated editing team</strong> (not just one editor)</span></div>
+            <div class="b-item"><span class="ck">&#10003;</span><span class="tx">3D gold text, VFX, custom animations</span></div>
+            <div class="b-item"><span class="ck">&#10003;</span><span class="tx">Weekly strategy calls</span></div>
+            <div class="b-item"><span class="ck">&#10003;</span><span class="tx">Brand guide setup per client</span></div>
+            <div class="b-item"><span class="ck">&#10003;</span><span class="tx"><strong>Account manager</strong></span></div>
+            <div class="b-item"><span class="ck">&#10003;</span><span class="tx"><strong>5 revisions</strong> per video</span></div>
+            <div class="b-item"><span class="ck">&#10003;</span><span class="tx"><strong>White-label delivery</strong></span></div>
+            <div class="b-label">AI Features — All Unlimited</div>
+            <div class="b-item"><span class="ck">&#10003;</span><span class="tx">AI Voiceover — <strong>Unlimited</strong></span></div>
+            <div class="b-item"><span class="ck">&#10003;</span><span class="tx">AI Virtual Staging — <strong>Unlimited</strong></span></div>
+            <div class="b-item"><span class="ck">&#10003;</span><span class="tx">AI Live-In Preview — <strong>Unlimited</strong></span></div>
+            <a href="https://calendly.com/thevisiostudios/30min" target="_blank" class="bundle-cta outline">Book a Strategy Call &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CUSTOM QUOTE BANNER -->
+  <section style="padding:48px 24px;">
+    <div class="container" style="max-width:800px;">
+      <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:20px;padding:48px 40px;text-align:center;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);">
+        <div style="font-size:13px;text-transform:uppercase;letter-spacing:2px;color:var(--purple);margin-bottom:12px;font-weight:600;">Flexible Plans</div>
+        <h3 style="font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:var(--text);margin:0 0 12px;">Need a Custom Package?</h3>
+        <p style="color:var(--text-muted);font-size:15px;line-height:1.7;max-width:540px;margin:0 auto 28px;">Every agency is different. If our tiers don't quite fit your volume or content mix, we'll build a custom retainer around your exact needs — no lock-in, no fluff.</p>
+        <a href="https://calendly.com/thevisiostudios/30min" target="_blank" style="display:inline-block;padding:14px 36px;background:var(--purple);color:#fff;border-radius:50px;font-weight:600;font-size:15px;text-decoration:none;transition:transform 0.2s,box-shadow 0.2s;box-shadow:0 4px 20px rgba(139,92,246,0.3);" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 28px rgba(139,92,246,0.45)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 20px rgba(139,92,246,0.3)'">Get a Custom Quote →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI ADD-ONS -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Beyond Your Plan</div>
+        <h2 class="section-title">AI-Powered Add-Ons</h2>
+        <div class="section-desc">Available as add-ons beyond included credits, or for Starter/Growth clients who want extra features.</div>
+      </div>
+      <div class="addon-grid" style="max-width:860px;margin:0 auto 40px;">
+        <div class="addon-card highlight-card"><div class="addon-tag tag-ai">AI SIGNATURE</div><div class="addon-name">AI Live-In Preview</div><div class="addon-price">$50<span style="font-size:12px;color:var(--text-muted);font-weight:400;">/video</span></div><div class="addon-desc">Realistic AI-generated people walking through, cooking, and relaxing in your property videos.</div></div>
+        <div class="addon-card highlight-card"><div class="addon-tag tag-ai">AI SIGNATURE</div><div class="addon-name">AI Virtual Staging</div><div class="addon-price">$40<span style="font-size:12px;color:var(--text-muted);font-weight:400;">/video</span></div><div class="addon-desc">AI-furnished empty rooms in video format. Vacant properties styled with furniture and decor in motion.</div></div>
+        <div class="addon-card highlight-card"><div class="addon-tag tag-ai">AI SIGNATURE</div><div class="addon-name">AI Voiceover</div><div class="addon-price">$20<span style="font-size:12px;color:var(--text-muted);font-weight:400;">/video</span></div><div class="addon-desc">Professional AI-generated narration. Multiple voice options, natural pacing, synced to the edit.</div></div>
+      </div>
+      <div class="addon-grid" style="max-width:860px;margin:0 auto;">
+        <div class="addon-card"><div class="addon-tag tag-addon">ADD-ON</div><div class="addon-name">Thumbnail Design</div><div class="addon-price">$25–$50<span style="font-size:12px;color:var(--text-muted);font-weight:400;">/each</span></div><div class="addon-desc">Custom-designed thumbnails optimized for clicks and engagement.</div></div>
+        <div class="addon-card"><div class="addon-tag tag-addon">ADD-ON</div><div class="addon-name">Rush Delivery (12 hrs)</div><div class="addon-price">+$25<span style="font-size:12px;color:var(--text-muted);font-weight:400;">/video</span></div><div class="addon-desc">Get your edited video within 12 hours instead of standard turnaround.</div></div>
+        <div class="addon-card"><div class="addon-tag tag-addon">ADD-ON</div><div class="addon-name">Extra Revision Round</div><div class="addon-price">$10<span style="font-size:12px;color:var(--text-muted);font-weight:400;">/round</span></div><div class="addon-desc">Additional revision beyond what's included in your plan.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section section-mid">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Simple Process</div>
+        <h2 class="section-title">How It Works</h2>
+      </div>
+      <div class="retainer-steps" style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;max-width:960px;margin:0 auto;">
+        <div style="text-align:center;">
+          <div style="width:56px;height:56px;border-radius:50%;background:rgba(224,212,253,0.5);border:1px solid rgba(255,255,255,0.5);display:flex;align-items:center;justify-content:center;font-size:24px;margin:0 auto 16px;">1</div>
+          <div style="font-family:'Playfair Display',serif;font-weight:700;font-size:15px;color:var(--text);margin-bottom:6px;">Choose Your Plan</div>
+          <div style="font-size:12px;color:var(--text-muted);line-height:1.6;">Pick the tier that matches your agency's volume.</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="width:56px;height:56px;border-radius:50%;background:rgba(224,212,253,0.5);border:1px solid rgba(255,255,255,0.5);display:flex;align-items:center;justify-content:center;font-size:24px;margin:0 auto 16px;">2</div>
+          <div style="font-family:'Playfair Display',serif;font-weight:700;font-size:15px;color:var(--text);margin-bottom:6px;">Send Raw Footage</div>
+          <div style="font-size:12px;color:var(--text-muted);line-height:1.6;">Upload anytime via shared drive or Slack.</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="width:56px;height:56px;border-radius:50%;background:rgba(224,212,253,0.5);border:1px solid rgba(255,255,255,0.5);display:flex;align-items:center;justify-content:center;font-size:24px;margin:0 auto 16px;">3</div>
+          <div style="font-family:'Playfair Display',serif;font-weight:700;font-size:15px;color:var(--text);margin-bottom:6px;">We Edit & Deliver</div>
+          <div style="font-size:12px;color:var(--text-muted);line-height:1.6;">Premium edits returned in 24–48 hours.</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="width:56px;height:56px;border-radius:50%;background:rgba(224,212,253,0.5);border:1px solid rgba(255,255,255,0.5);display:flex;align-items:center;justify-content:center;font-size:24px;margin:0 auto 16px;">4</div>
+          <div style="font-family:'Playfair Display',serif;font-weight:700;font-size:15px;color:var(--text);margin-bottom:6px;">White-Label Files</div>
+          <div style="font-size:12px;color:var(--text-muted);line-height:1.6;">Branded under your agency, ready for your clients.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PER-VIDEO RATES -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">A La Carte</div>
+        <h2 class="section-title">Per-Video Rates</h2>
+        <div class="section-desc">Not ready for a retainer? Order individual videos at our standard premium rates.</div>
+      </div>
+      <div style="max-width:600px;margin:0 auto;">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+          <div class="addon-card" style="text-align:center;"><div class="addon-name">Real Estate Listing Video</div><div class="addon-price">$120<span style="font-size:12px;color:var(--text-muted);font-weight:400;">/video</span></div></div>
+          <div class="addon-card" style="text-align:center;"><div class="addon-name">Social Media Reel</div><div class="addon-price">$80<span style="font-size:12px;color:var(--text-muted);font-weight:400;">/video</span></div></div>
+          <div class="addon-card" style="text-align:center;"><div class="addon-name">Video Ad</div><div class="addon-price">$120<span style="font-size:12px;color:var(--text-muted);font-weight:400;">/video</span></div></div>
+          <div class="addon-card" style="text-align:center;"><div class="addon-name">Long-Form Edit</div><div class="addon-price">$150<span style="font-size:12px;color:var(--text-muted);font-weight:400;">/video</span></div><div class="addon-desc">Up to 20 minutes</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section-mid">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Got Questions?</div>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+      </div>
+      <div style="max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:12px;">
+        <details style="background:var(--white);border-radius:14px;border:1px solid var(--border);box-shadow:var(--card-shadow);overflow:hidden;">
+          <summary style="padding:20px 24px;font-family:'Playfair Display',serif;font-weight:700;font-size:15px;color:var(--text);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">What editing quality do I get? <span style="font-size:18px;color:var(--purple);transition:transform 0.2s;">+</span></summary>
+          <div style="padding:0 24px 20px;font-size:14px;color:var(--text-light);line-height:1.8;">Every video receives our premium-tier editing: cinematic color grading, motion graphics, 3D text animations, licensed music, beat-synced editing, and professional sound design.</div>
+        </details>
+        <details style="background:var(--white);border-radius:14px;border:1px solid var(--border);box-shadow:var(--card-shadow);overflow:hidden;">
+          <summary style="padding:20px 24px;font-family:'Playfair Display',serif;font-weight:700;font-size:15px;color:var(--text);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">Can my clients tell you edited the videos? <span style="font-size:18px;color:var(--purple);transition:transform 0.2s;">+</span></summary>
+          <div style="padding:0 24px 20px;font-size:14px;color:var(--text-light);line-height:1.8;">No. All deliverables are white-labeled — no VISIO branding. Your clients see your agency's work, not ours.</div>
+        </details>
+        <details style="background:var(--white);border-radius:14px;border:1px solid var(--border);box-shadow:var(--card-shadow);overflow:hidden;">
+          <summary style="padding:20px 24px;font-family:'Playfair Display',serif;font-weight:700;font-size:15px;color:var(--text);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">What's the turnaround time? <span style="font-size:18px;color:var(--purple);transition:transform 0.2s;">+</span></summary>
+          <div style="padding:0 24px 20px;font-size:14px;color:var(--text-light);line-height:1.8;">24–48 hours on every video, every tier. Rush delivery (12 hours) is available as an add-on.</div>
+        </details>
+        <details style="background:var(--white);border-radius:14px;border:1px solid var(--border);box-shadow:var(--card-shadow);overflow:hidden;">
+          <summary style="padding:20px 24px;font-family:'Playfair Display',serif;font-weight:700;font-size:15px;color:var(--text);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">What AI features are included? <span style="font-size:18px;color:var(--purple);transition:transform 0.2s;">+</span></summary>
+          <div style="padding:0 24px 20px;font-size:14px;color:var(--text-light);line-height:1.8;">Each tier includes AI credits: Starter gets 1 AI voiceover, Growth gets 2 voiceovers + 2 virtual stagings, and Scale gets unlimited access to all three AI services. Additional AI features can be purchased as add-ons on any tier.</div>
+        </details>
+        <details style="background:var(--white);border-radius:14px;border:1px solid var(--border);box-shadow:var(--card-shadow);overflow:hidden;">
+          <summary style="padding:20px 24px;font-family:'Playfair Display',serif;font-weight:700;font-size:15px;color:var(--text);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">Can I mix and match video types? <span style="font-size:18px;color:var(--purple);transition:transform 0.2s;">+</span></summary>
+          <div style="padding:0 24px 20px;font-size:14px;color:var(--text-light);line-height:1.8;">Your plan includes a set number of each content type per month. Need a custom mix? Book a strategy call and we'll build a plan around your agency's needs.</div>
+        </details>
+        <details style="background:var(--white);border-radius:14px;border:1px solid var(--border);box-shadow:var(--card-shadow);overflow:hidden;">
+          <summary style="padding:20px 24px;font-family:'Playfair Display',serif;font-weight:700;font-size:15px;color:var(--text);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">What if I need more videos than my plan includes? <span style="font-size:18px;color:var(--purple);transition:transform 0.2s;">+</span></summary>
+          <div style="padding:0 24px 20px;font-size:14px;color:var(--text-light);line-height:1.8;">Additional videos are billed at our standard per-video rates. Or upgrade to the next tier for better value.</div>
+        </details>
+        <details style="background:var(--white);border-radius:14px;border:1px solid var(--border);box-shadow:var(--card-shadow);overflow:hidden;">
+          <summary style="padding:20px 24px;font-family:'Playfair Display',serif;font-weight:700;font-size:15px;color:var(--text);cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;">Do you handle shooting or just editing? <span style="font-size:18px;color:var(--purple);transition:transform 0.2s;">+</span></summary>
+          <div style="padding:0 24px 20px;font-size:14px;color:var(--text-light);line-height:1.8;">Editing and post-production only. You or your clients provide the raw footage — we handle everything from there.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="cta-banner">
+        <h2>Ready to Scale Your Agency?</h2>
+        <p>Stop hiring editors. Start outsourcing to a team that delivers premium quality at a fraction of the cost.</p>
+        <a href="https://calendly.com/thevisiostudios/30min" target="_blank" class="btn-primary">Book Your Free Strategy Call &rarr;</a>
+      </div>
+    </div>
+  </section>
+</div>
+
 </main>
 
 <!-- ====== FOOTER ====== -->
@@ -1237,6 +1498,7 @@ src="https://www.facebook.com/tr?id=806124832324167&ev=PageView&noscript=1"
       <a href="#" onclick="showPage('services')">Services</a>
       <a href="#" onclick="showPage('works')">Our Works</a>
       <a href="#" onclick="showPage('contact')">Contact Us</a>
+      <a href="#" onclick="showPage('retainer')">Retainer Partners</a>
     </div>
     <div class="footer-links">
       <h4>Services</h4>
@@ -1276,7 +1538,8 @@ function showPage(page) {
     about: 'About Us — Our Team, Mission & Vision | Visio Studios',
     services: 'Video Editing & Content Marketing Pricing | Visio Studios',
     works: 'Portfolio — Video Editing & Content Marketing Work | Visio Studios',
-    contact: 'Book a Free Strategy Call | Contact Visio Studios'
+    contact: 'Book a Free Strategy Call | Contact Visio Studios',
+    retainer: 'White-Label Retainer Partners — Pricing | Visio Studios'
   };
   document.title = titles[page] || titles.home;
   document.querySelectorAll('.vid-portfolio-item video').forEach(v => { v.pause(); v.muted = true; v.parentElement.classList.remove('playing'); });
