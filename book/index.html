@@ -1,0 +1,1287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VISIO Studios — Scale Your Agency's Editing Without Hiring In-House</title>
+    <meta name="description" content="VISIO Studios handles your post-production so you can focus on shooting. Dedicated editing team, 24-48hr turnarounds, white-label delivery. Book a free discovery call.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,800;0,900;1,700;1,900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --charcoal: #282525;
+            --deep-purple: #4A2D6B;
+            --purple: #A696BB;
+            --white: #ffffff;
+            --lilac: #E0D4FD;
+            --light-lavender: #E8E0F0;
+            --bg-light: #F0EEF5;
+            --green: #5CB87A;
+            --red: #e74c3c;
+
+            --text-dark: #282525;
+            --text-muted: #6B6380;
+            --text-light: rgba(255,255,255,0.85);
+            --text-light-muted: rgba(255,255,255,0.6);
+            --border-light: rgba(255,255,255,0.12);
+            --border-subtle: rgba(40,37,37,0.08);
+
+            --glass-bg: rgba(255,255,255,0.6);
+            --glass-border: rgba(255,255,255,0.8);
+            --glass-shadow: rgba(31,38,135,0.08);
+            --glass-blur: blur(16px);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--charcoal);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ─── Fade-in on scroll ─── */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ─── Top Bar / Urgency Banner ─── */
+        .top-bar {
+            background: linear-gradient(135deg, #3A1F5A, var(--deep-purple), #5C3D8F);
+            color: var(--white);
+            text-align: center;
+            padding: 12px 24px;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .top-bar span {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            color: var(--white);
+            padding: 2px 12px;
+            border-radius: 4px;
+            margin-left: 8px;
+            font-size: 13px;
+            backdrop-filter: blur(8px);
+        }
+
+        /* ─── Navigation ─── */
+        .nav-wrap {
+            background: var(--charcoal);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 24px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 40px;
+            width: auto;
+            display: block;
+        }
+
+        .nav-cta {
+            background: var(--white);
+            color: var(--green);
+            padding: 12px 28px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+        }
+
+        .nav-cta:hover {
+            background: #f0f0f0;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(255,255,255,0.25);
+        }
+
+        /* ─── Hero Section ─── */
+        .hero {
+            padding: 80px 24px 100px;
+            text-align: center;
+            position: relative;
+            background: var(--bg-light);
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(40,37,37,0.1), transparent);
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(74, 45, 107, 0.1);
+            border: 1px solid rgba(74, 45, 107, 0.2);
+            color: var(--deep-purple);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 32px;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(36px, 5.5vw, 58px);
+            font-weight: 900;
+            line-height: 1.15;
+            margin-bottom: 24px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            color: var(--charcoal);
+        }
+
+        .hero h1 .highlight {
+            color: var(--deep-purple);
+            font-style: italic;
+        }
+
+        .hero p.subhead {
+            font-size: clamp(15px, 2vw, 18px);
+            color: var(--text-muted);
+            max-width: 650px;
+            margin: 0 auto 40px;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+
+        .hero-cta {
+            display: inline-block;
+            background: var(--white);
+            color: var(--green);
+            padding: 18px 48px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+        }
+
+        .hero-cta:hover {
+            background: #f0f0f0;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+        }
+
+        .hero-sub {
+            margin-top: 16px;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        /* ─── Stats Bar ─── */
+        .stats-bar {
+            background: linear-gradient(135deg, var(--deep-purple), #5C3D8F);
+            padding: 44px 24px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 38px;
+            font-weight: 900;
+            color: var(--white);
+            margin-bottom: 4px;
+        }
+
+        .stat-item p {
+            font-size: 12px;
+            color: rgba(255,255,255,0.7);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 500;
+        }
+
+        /* ─── Section styling ─── */
+        section {
+            padding: 80px 24px;
+        }
+
+        .section-label {
+            text-align: center;
+            font-size: 12px;
+            color: var(--deep-purple);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(28px, 4vw, 38px);
+            font-weight: 800;
+            margin-bottom: 48px;
+            line-height: 1.2;
+            color: var(--charcoal);
+        }
+
+        /* ─── What You Get / What This Isn't ─── */
+        .dual-section {
+            background: var(--bg-light);
+        }
+
+        .dual-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .dual-column h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--charcoal);
+        }
+
+        .dual-column h3 .icon-check { color: var(--green); }
+        .dual-column h3 .icon-x { color: var(--red); }
+
+        .check-list, .x-list {
+            list-style: none;
+        }
+
+        .check-list li, .x-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-subtle);
+            font-size: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            color: var(--text-muted);
+        }
+
+        .check-list li::before {
+            content: '\2713';
+            color: var(--green);
+            font-weight: 700;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .x-list li::before {
+            content: '\2715';
+            color: var(--red);
+            font-weight: 700;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        /* ─── For You If / Not For You ─── */
+        .qualify-section {
+            background: var(--bg-light);
+        }
+
+        .qualify-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .qualify-card {
+            background: var(--glass-bg);
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+            border-radius: 18px;
+            padding: 36px;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 8px 32px var(--glass-shadow),
+                        inset 0 1px 0 rgba(255,255,255,0.5);
+        }
+
+        .qualify-card.yes {
+            border-color: rgba(92, 184, 122, 0.35);
+        }
+
+        .qualify-card.no {
+            border-color: rgba(231, 76, 60, 0.25);
+        }
+
+        .qualify-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .qualify-card.yes h3 { color: var(--green); }
+        .qualify-card.no h3 { color: var(--red); }
+
+        .qualify-card li {
+            padding: 10px 0;
+            font-size: 15px;
+            color: var(--text-muted);
+            border-bottom: 1px solid var(--border-subtle);
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            list-style: none;
+        }
+
+        .qualify-card li:last-child {
+            border-bottom: none;
+        }
+
+        .qualify-card.yes li::before {
+            content: '\2713';
+            color: var(--green);
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .qualify-card.no li::before {
+            content: '\2715';
+            color: var(--red);
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        /* ─── How It Works ─── */
+        .how-section {
+            background: var(--bg-light);
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .step-card {
+            text-align: center;
+            padding: 32px 24px;
+            background: rgba(255,255,255,0.7);
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+            border-radius: 18px;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 8px 32px var(--glass-shadow),
+                        inset 0 1px 0 rgba(255,255,255,0.5);
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            overflow: hidden;
+        }
+
+        .step-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--deep-purple), var(--purple));
+            border-radius: 18px 18px 0 0;
+        }
+
+        .step-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(31,38,135,0.15);
+        }
+
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            background: var(--deep-purple);
+            color: var(--white);
+            border-radius: 50%;
+            font-weight: 800;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .step-card h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--charcoal);
+        }
+
+        .step-card p {
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* ─── Pricing Preview ─── */
+        .pricing-section {
+            background: var(--bg-light);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .pricing-card {
+            background: var(--glass-bg);
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+            border-radius: 18px;
+            padding: 36px 28px;
+            border: 1px solid var(--glass-border);
+            text-align: center;
+            transition: all 0.3s;
+            box-shadow: 0 8px 32px var(--glass-shadow),
+                        inset 0 1px 0 rgba(255,255,255,0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(31,38,135,0.15);
+        }
+
+        .pricing-card.featured {
+            border-color: var(--deep-purple);
+            transform: scale(1.03);
+            background: rgba(255,255,255,0.8);
+        }
+
+        .pricing-card.featured::before {
+            content: 'MOST POPULAR';
+            position: absolute;
+            top: -1px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, var(--deep-purple), #5C3D8F);
+            color: var(--white);
+            padding: 6px 20px;
+            border-radius: 0 0 12px 12px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .pricing-card.featured::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--deep-purple), var(--purple), var(--lilac));
+        }
+
+        .pricing-card h4 {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .pricing-card .price {
+            font-family: 'Playfair Display', serif;
+            font-size: 40px;
+            font-weight: 900;
+            margin-bottom: 4px;
+            color: var(--charcoal);
+        }
+
+        .pricing-card .price-sub {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-bottom: 24px;
+        }
+
+        .pricing-card .feature-list {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 28px;
+        }
+
+        .pricing-card .feature-list li {
+            padding: 8px 0;
+            font-size: 14px;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .pricing-card .feature-list li::before {
+            content: '\2713';
+            color: var(--green);
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .pricing-cta {
+            display: block;
+            padding: 14px 24px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            border: 2px solid var(--purple);
+            color: var(--deep-purple);
+            background: transparent;
+        }
+
+        .pricing-cta:hover {
+            border-color: var(--deep-purple);
+            background: rgba(74,45,107,0.06);
+        }
+
+        .pricing-card.featured .pricing-cta {
+            background: var(--white);
+            color: var(--green);
+            border-color: var(--white);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+        }
+
+        .pricing-card.featured .pricing-cta:hover {
+            background: #f0f0f0;
+            border-color: #f0f0f0;
+        }
+
+        .pricing-note {
+            text-align: center;
+            margin-top: 32px;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        /* ─── Social Proof ─── */
+        .proof-section {
+            background: var(--bg-light);
+        }
+
+        .proof-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .proof-card {
+            background: var(--glass-bg);
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+            border-radius: 18px;
+            padding: 32px 24px;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 8px 32px var(--glass-shadow),
+                        inset 0 1px 0 rgba(255,255,255,0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .proof-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .proof-stars {
+            color: var(--deep-purple);
+            font-size: 18px;
+            margin-bottom: 16px;
+        }
+
+        .proof-card p {
+            font-size: 15px;
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .proof-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .proof-avatar {
+            width: 40px;
+            height: 40px;
+            background: var(--deep-purple);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 14px;
+            color: var(--lilac);
+        }
+
+        .proof-name {
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--charcoal);
+        }
+
+        .proof-role {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        /* ─── Founder Section ─── */
+        .founder-section {
+            background: var(--bg-light);
+        }
+
+        .founder-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 60px;
+            align-items: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .founder-image {
+            width: 100%;
+            aspect-ratio: 4/5;
+            background: linear-gradient(135deg, var(--light-lavender), var(--lilac));
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: var(--text-muted);
+            text-align: center;
+            padding: 24px;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 8px 32px var(--glass-shadow);
+        }
+
+        .founder-content .founder-label {
+            font-size: 12px;
+            color: var(--deep-purple);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .founder-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 34px;
+            font-weight: 800;
+            margin-bottom: 24px;
+            color: var(--charcoal);
+        }
+
+        .founder-content p {
+            font-size: 15px;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+            line-height: 1.8;
+        }
+
+        .founder-content .signature {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 24px;
+            color: var(--deep-purple);
+            margin-top: 24px;
+        }
+
+        /* ─── Final CTA ─── */
+        .final-cta {
+            background: var(--charcoal);
+            padding: 100px 24px;
+            text-align: center;
+        }
+
+        .final-cta .section-label {
+            color: var(--purple);
+            margin-bottom: 16px;
+        }
+
+        .final-cta h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(28px, 4vw, 42px);
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+
+        .final-cta .accent {
+            color: var(--purple);
+        }
+
+        .final-cta p {
+            font-size: 17px;
+            color: var(--text-light-muted);
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+
+        .final-cta .hero-sub {
+            color: var(--text-light-muted);
+        }
+
+        /* ─── FAQ ─── */
+        .faq-section {
+            background: var(--bg-light);
+        }
+
+        .faq-list {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            color: var(--charcoal);
+            font-size: 16px;
+            font-weight: 600;
+            padding: 20px 0;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: inherit;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 24px;
+            color: var(--deep-purple);
+            font-weight: 300;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.open .faq-question::after {
+            content: '\2212';
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-answer p {
+            padding-bottom: 20px;
+            font-size: 15px;
+            color: var(--text-muted);
+            line-height: 1.7;
+        }
+
+        .faq-item.open .faq-answer {
+            max-height: 300px;
+        }
+
+        /* ─── Footer ─── */
+        footer {
+            background: var(--charcoal);
+            padding: 40px 24px;
+            text-align: center;
+        }
+
+        footer .logo {
+            margin-bottom: 16px;
+            display: inline-block;
+        }
+
+        footer .logo img {
+            height: 32px;
+        }
+
+        footer p {
+            font-size: 13px;
+            color: var(--text-light-muted);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        footer a {
+            color: var(--purple);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: var(--lilac);
+        }
+
+        /* ─── Responsive ─── */
+        @media (max-width: 768px) {
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
+            }
+
+            .dual-grid,
+            .qualify-grid,
+            .founder-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .steps-grid,
+            .pricing-grid,
+            .proof-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+            }
+
+            .pricing-card.featured {
+                transform: none;
+            }
+
+            .founder-grid {
+                gap: 40px;
+            }
+
+            .founder-image {
+                max-width: 300px;
+                margin: 0 auto;
+            }
+
+            .hero {
+                padding: 60px 24px 80px;
+            }
+
+            nav {
+                padding: 16px 24px;
+            }
+
+            .nav-cta {
+                padding: 10px 20px;
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 16px;
+            }
+
+            .stat-item h3 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Urgency Banner -->
+    <div class="top-bar">
+        Limited Availability — We Only Onboard 3 New Clients Per Month
+        <span>Apply Now</span>
+    </div>
+
+    <!-- Navigation -->
+    <div class="nav-wrap">
+        <nav>
+            <a href="https://thevisiostudios.com" class="logo"><img src="https://www.dropbox.com/scl/fi/45kjd2hkndqxac280sz6i/Visio-White-4x.png?rlkey=4md0qzvzkmkfbdtw1dd4eecf7&st=8pj5j6pn&raw=1" alt="VISIO Studios"></a>
+            <a href="https://calendly.com/visiostudios" class="nav-cta" target="_blank" rel="noopener">Book a Call</a>
+        </nav>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-badge">B2B Post-Production Partner</div>
+            <h1>Scale Your Agency's Editing<br><span class="highlight">Without Hiring In-House</span></h1>
+            <p class="subhead">We become your dedicated editing team — same-day capacity, 24-48hr turnarounds, and white-label delivery so your clients never know we exist.</p>
+            <a href="https://calendly.com/visiostudios" class="hero-cta" target="_blank" rel="noopener">Book Your Free Discovery Call</a>
+            <p class="hero-sub">No commitment. 15-minute call to see if we're the right fit.</p>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <div class="stats-bar">
+        <div class="stats-grid">
+            <div class="stat-item fade-up">
+                <h3>1,000+</h3>
+                <p>Projects Delivered</p>
+            </div>
+            <div class="stat-item fade-up">
+                <h3>24hr</h3>
+                <p>Avg Turnaround</p>
+            </div>
+            <div class="stat-item fade-up">
+                <h3>70%</h3>
+                <p>Below US Rates</p>
+            </div>
+            <div class="stat-item fade-up">
+                <h3>100%</h3>
+                <p>White-Label</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- What You Get vs What This Isn't -->
+    <section class="dual-section">
+        <div class="container">
+            <p class="section-label">What Working With Us Looks Like</p>
+            <h2 class="section-title">Here's Exactly What You Get</h2>
+            <div class="dual-grid">
+                <div class="dual-column fade-up">
+                    <h3><span class="icon-check">&#10003;</span> What's Included</h3>
+                    <ul class="check-list">
+                        <li>Dedicated editing team assigned to your account</li>
+                        <li>24-48 hour turnaround on all deliverables</li>
+                        <li>White-label delivery — your brand, our work</li>
+                        <li>Dedicated project manager for seamless communication</li>
+                        <li>Same-day capacity for rush projects</li>
+                        <li>Unlimited revisions until you're satisfied</li>
+                        <li>All major formats: Reels, YouTube, TikTok, ads, long-form</li>
+                    </ul>
+                </div>
+                <div class="dual-column fade-up">
+                    <h3><span class="icon-x">&#10005;</span> This Is NOT</h3>
+                    <ul class="x-list">
+                        <li>A freelance marketplace with random editors</li>
+                        <li>Offshore outsourcing with timezone headaches</li>
+                        <li>A DIY editing tool or AI-generated content</li>
+                        <li>A one-size-fits-all template service</li>
+                        <li>Slow turnarounds that bottleneck your pipeline</li>
+                        <li>Hidden fees or surprise charges</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- This Is For You If -->
+    <section class="qualify-section">
+        <div class="container">
+            <p class="section-label">Is This Right For You?</p>
+            <h2 class="section-title">Let's Find Out</h2>
+            <div class="qualify-grid">
+                <div class="qualify-card yes fade-up">
+                    <h3>&#10003; This is for you if you...</h3>
+                    <ul>
+                        <li>Run a media agency and editing is bottlenecking your growth</li>
+                        <li>Are a videographer who wants to focus on shooting, not editing</li>
+                        <li>Need consistent, high-quality output for multiple clients</li>
+                        <li>Want to scale your content production without scaling your payroll</li>
+                        <li>Need a reliable team that delivers on deadline, every time</li>
+                        <li>Want white-label editing that makes your agency look elite</li>
+                    </ul>
+                </div>
+                <div class="qualify-card no fade-up">
+                    <h3>&#10005; This is NOT for you if you...</h3>
+                    <ul>
+                        <li>Are looking for the cheapest option (you get what you pay for)</li>
+                        <li>Only need one edit every few months</li>
+                        <li>Aren't ready to invest in your agency's growth</li>
+                        <li>Want to micromanage every frame of the editing process</li>
+                        <li>Don't have clients or content to edit yet</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-section">
+        <div class="container">
+            <p class="section-label">Simple Process</p>
+            <h2 class="section-title">3 Steps to Scale Your Editing</h2>
+            <div class="steps-grid">
+                <div class="step-card fade-up">
+                    <div class="step-number">1</div>
+                    <h4>Book a Discovery Call</h4>
+                    <p>15-minute call to understand your volume, style, and goals. We'll map out the right plan for your agency.</p>
+                </div>
+                <div class="step-card fade-up">
+                    <div class="step-number">2</div>
+                    <h4>Onboard in 48 Hours</h4>
+                    <p>We assign your dedicated team, learn your brand guidelines, and set up your project management workflow.</p>
+                </div>
+                <div class="step-card fade-up">
+                    <div class="step-number">3</div>
+                    <h4>Send Files & Scale</h4>
+                    <p>Upload raw footage, get polished edits back in 24-48 hours. White-labeled and ready for your clients.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing-section">
+        <div class="container">
+            <p class="section-label">Transparent Pricing</p>
+            <h2 class="section-title">Plans Built for Agencies</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card fade-up">
+                    <h4>Growth</h4>
+                    <div class="price">$2,199<span style="font-size:16px;font-weight:400;color:var(--text-muted)">/mo</span></div>
+                    <div class="price-sub">Perfect for growing agencies</div>
+                    <ul class="feature-list">
+                        <li>25 edits per month</li>
+                        <li>24-48hr turnaround</li>
+                        <li>Dedicated project manager</li>
+                        <li>White-label delivery</li>
+                        <li>Unlimited revisions</li>
+                    </ul>
+                    <a href="https://calendly.com/visiostudios" class="pricing-cta" target="_blank" rel="noopener">Get Started</a>
+                </div>
+                <div class="pricing-card featured fade-up">
+                    <h4>Scale</h4>
+                    <div class="price">$3,999<span style="font-size:16px;font-weight:400;color:var(--text-muted)">/mo</span></div>
+                    <div class="price-sub">For agencies with serious volume</div>
+                    <ul class="feature-list">
+                        <li>46 edits per month</li>
+                        <li>Same-day rush capacity</li>
+                        <li>Dedicated editing team</li>
+                        <li>Priority project manager</li>
+                        <li>White-label delivery</li>
+                        <li>Unlimited revisions</li>
+                    </ul>
+                    <a href="https://calendly.com/visiostudios" class="pricing-cta" target="_blank" rel="noopener">Get Started</a>
+                </div>
+                <div class="pricing-card fade-up">
+                    <h4>Enterprise</h4>
+                    <div class="price">$6,999<span style="font-size:16px;font-weight:400;color:var(--text-muted)">/mo</span></div>
+                    <div class="price-sub">For high-volume agencies</div>
+                    <ul class="feature-list">
+                        <li>80 edits per month</li>
+                        <li>Same-day capacity</li>
+                        <li>Dedicated editing team</li>
+                        <li>Senior project manager</li>
+                        <li>White-label delivery</li>
+                        <li>Custom workflows</li>
+                        <li>Unlimited revisions</li>
+                    </ul>
+                    <a href="https://calendly.com/visiostudios" class="pricing-cta" target="_blank" rel="noopener">Get Started</a>
+                </div>
+            </div>
+            <p class="pricing-note">Need just a few edits? A la carte editing starts at <strong style="color:var(--charcoal)">$45/edit</strong>. <a href="https://thevisiostudios.com" style="color:var(--deep-purple)" target="_blank" rel="noopener">View full pricing &rarr;</a></p>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="proof-section">
+        <div class="container">
+            <p class="section-label">What Our Partners Say</p>
+            <h2 class="section-title">Trusted by Agencies Nationwide</h2>
+            <div class="proof-grid">
+                <div class="proof-card fade-up">
+                    <div class="proof-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p>"Visio has completely transformed my Video Marketing business. From the very first project, the quality of their work blew me away. Turnaround times are consistently fast without ever sacrificing quality. Since using Visio, I've seen a real boost in views and engagement across my content. Visio is the real deal."</p>
+                    <div class="proof-author">
+                        <div class="proof-avatar">MA</div>
+                        <div>
+                            <div class="proof-name">Marc Ado&ntilde;a</div>
+                            <div class="proof-role">Legacy For Generation</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="proof-card fade-up">
+                    <div class="proof-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p>"This team of true professionals exceeded our expectations! They arrived on time, actively listened to our ideas, and seamlessly integrated them into the shoot. I highly recommend them!"</p>
+                    <div class="proof-author">
+                        <div class="proof-avatar">CC</div>
+                        <div>
+                            <div class="proof-name">Cee Cruzado</div>
+                            <div class="proof-role">GFRP Philippines</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="proof-card fade-up">
+                    <div class="proof-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p>"They are good at what they do. Very punctual with time and very professional during our setup of meetings and schedules. Very helpful also on how to use the content since I'm not that techy."</p>
+                    <div class="proof-author">
+                        <div class="proof-avatar">BO</div>
+                        <div>
+                            <div class="proof-name">Betty Ongsiaco</div>
+                            <div class="proof-role">Remax Capital</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder Section -->
+    <section class="founder-section">
+        <div class="container">
+            <div class="founder-grid">
+                <div class="founder-image fade-up">
+                    <img src="https://www.dropbox.com/scl/fi/fu4touhcbqj98flkf0yfv/95FC8D53-C9E5-4A6F-A39D-3C6DFEDA93D9.JPG?rlkey=r6pm21z1i3mivogong499zi66&st=8udl824g&raw=1" alt="Maxine Gorospe, Founder of VISIO Studios" style="width:100%;max-width:400px;border-radius:18px;object-fit:cover;">
+                </div>
+                <div class="founder-content fade-up">
+                    <p class="founder-label">Meet the Founder</p>
+                    <h2>Built by Someone Who Saw the Gap Firsthand</h2>
+                    <p>I didn't start VISIO Studios as a videographer — I started it as a project manager who kept seeing the same problem over and over. Media agencies and business owners were struggling to produce high-quality content consistently, and the bottleneck was always the same: post-production.</p>
+                    <p>Working closely with a media agency in real estate, I saw how much potential was being left on the table. Great footage sitting in folders for weeks. Missed posting schedules. Inconsistent quality. I realized I could solve that — not by competing with agencies, but by becoming the white-label production partner they were missing.</p>
+                    <p>That's what VISIO is: a collaborative, creative extension of your team that delivers polished content with fast turnaround times — so you can focus on what you do best. Whether you're doing 20 edits a month or 200, we show up like we're on your payroll.</p>
+                    <div class="signature">— Maxine, VISIO Studios</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <div class="container">
+            <p class="section-label">Questions?</p>
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">How fast is the turnaround?</button>
+                    <div class="faq-answer">
+                        <p>Standard turnaround is 24-48 hours for most edits. Rush projects can be delivered same-day on Scale and Enterprise plans. We never miss a deadline.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">What types of content do you edit?</button>
+                    <div class="faq-answer">
+                        <p>We handle everything: Instagram Reels, TikToks, YouTube videos, paid ad creatives, real estate tours, event recaps, podcasts, long-form content, and more. If it involves video post-production, we've got you covered.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Is the editing truly white-label?</button>
+                    <div class="faq-answer">
+                        <p>100%. Your clients will never know we exist. We deliver under your brand, follow your style guides, and use your templates. It's as if you have an in-house team — without the overhead.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">What if I don't need a monthly plan?</button>
+                    <div class="faq-answer">
+                        <p>No problem. We offer a la carte editing starting at $45 per edit. This is perfect for videographers or agencies who need occasional support without a monthly commitment.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">How does onboarding work?</button>
+                    <div class="faq-answer">
+                        <p>After your discovery call, we onboard you within 48 hours. We learn your brand guidelines, editing style, and delivery preferences. Then you start uploading footage and we start delivering.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">What if I'm not happy with an edit?</button>
+                    <div class="faq-answer">
+                        <p>Every plan includes unlimited revisions. We work with you until the edit is exactly what you need. Our goal is to learn your style so well that revisions become rare.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <p class="section-label">Limited Availability</p>
+            <h2>Ready to Scale Your Editing<br><span class="accent italic">Without the Overhead?</span></h2>
+            <p>Book a free 15-minute discovery call. We'll map out how VISIO can fit into your agency's workflow and start delivering within 48 hours.</p>
+            <a href="https://calendly.com/visiostudios" class="hero-cta" target="_blank" rel="noopener">Book Your Discovery Call</a>
+            <p class="hero-sub">We only take on 3 new clients per month. Spots fill fast.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <a href="https://thevisiostudios.com" class="logo"><img src="https://www.dropbox.com/scl/fi/45kjd2hkndqxac280sz6i/Visio-White-4x.png?rlkey=4md0qzvzkmkfbdtw1dd4eecf7&st=8pj5j6pn&raw=1" alt="VISIO Studios"></a>
+        <p style="margin-top:16px;">&copy; 2025 VISIO Studios. All Rights Reserved.<br>
+        <a href="https://thevisiostudios.com">thevisiostudios.com</a></p>
+        <p style="margin-top:24px; font-size:11px; max-width:500px;">
+            Results vary based on individual effort and circumstances. The testimonials shown represent the experience of specific clients and are not a guarantee of results. VISIO Studios provides professional post-production editing services.
+        </p>
+    </footer>
+
+    <!-- FAQ Toggle + Scroll Animation Script -->
+    <script>
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                const isOpen = item.classList.contains('open');
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+                if (!isOpen) item.classList.add('open');
+            });
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+    </script>
+
+</body>
+</html>

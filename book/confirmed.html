@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You're In! — VISIO Studios</title>
+    <meta name="description" content="Your discovery call with VISIO Studios is confirmed. Here's what to expect next.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,700;0,800;0,900;1,700;1,900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --charcoal: #282525;
+            --deep-purple: #4A2D6B;
+            --purple: #A696BB;
+            --white: #ffffff;
+            --lilac: #E0D4FD;
+            --light-lavender: #E8E0F0;
+            --bg-light: #F0EEF5;
+            --green: #5CB87A;
+            --text-muted: #6B6380;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--charcoal);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .confirmation-wrapper {
+            max-width: 720px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 60px 32px 40px;
+            text-align: center;
+        }
+
+        /* Logo */
+        .conf-logo {
+            margin-bottom: 48px;
+        }
+
+        .conf-logo img {
+            height: 36px;
+            width: auto;
+        }
+
+        /* Main heading */
+        .conf-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(42px, 6vw, 64px);
+            font-weight: 900;
+            font-style: italic;
+            color: var(--deep-purple);
+            margin-bottom: 28px;
+            line-height: 1.1;
+        }
+
+        /* Subtext */
+        .conf-subtext {
+            font-size: 18px;
+            font-weight: 500;
+            color: var(--charcoal);
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+
+        .conf-subtext strong {
+            color: var(--deep-purple);
+        }
+
+        /* Divider */
+        .conf-divider {
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--deep-purple), var(--purple));
+            margin: 0 auto 40px;
+            border-radius: 2px;
+        }
+
+        /* What to expect card */
+        .expect-card {
+            background: rgba(255,255,255,0.6);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255,255,255,0.8);
+            border-radius: 18px;
+            padding: 36px 32px;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 32px rgba(31,38,135,0.08),
+                        inset 0 1px 0 rgba(255,255,255,0.5);
+            text-align: left;
+        }
+
+        .expect-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--charcoal);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .expect-list {
+            list-style: none;
+        }
+
+        .expect-list li {
+            padding: 12px 0;
+            font-size: 15px;
+            color: var(--text-muted);
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            border-bottom: 1px solid rgba(40,37,37,0.08);
+        }
+
+        .expect-list li:last-child {
+            border-bottom: none;
+        }
+
+        .expect-list li .step-icon {
+            flex-shrink: 0;
+            width: 28px;
+            height: 28px;
+            background: var(--deep-purple);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 13px;
+        }
+
+        .expect-list li strong {
+            color: var(--charcoal);
+        }
+
+        /* Calendar CTA */
+        .calendar-nudge {
+            font-size: 17px;
+            font-weight: 500;
+            color: var(--charcoal);
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .calendar-link {
+            display: inline-block;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--deep-purple);
+            text-decoration: underline;
+            text-underline-offset: 4px;
+            margin-bottom: 40px;
+            transition: color 0.3s;
+        }
+
+        .calendar-link:hover {
+            color: var(--green);
+        }
+
+        /* PS note */
+        .ps-note {
+            font-size: 15px;
+            color: var(--text-muted);
+            margin-bottom: 48px;
+            line-height: 1.6;
+        }
+
+        .ps-note strong {
+            color: var(--charcoal);
+        }
+
+        /* Signature */
+        .signature-area {
+            margin-bottom: 32px;
+        }
+
+        .signature-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            font-style: italic;
+            color: var(--charcoal);
+            line-height: 1.2;
+        }
+
+        .signature-title {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 8px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        /* Footer line */
+        .conf-footer {
+            padding-top: 32px;
+            border-top: 1px solid rgba(40,37,37,0.08);
+        }
+
+        .conf-footer p {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        .conf-footer a {
+            color: var(--purple);
+            text-decoration: none;
+        }
+
+        .conf-footer a:hover {
+            color: var(--deep-purple);
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .confirmation-wrapper {
+                padding: 40px 20px 32px;
+            }
+
+            .expect-card {
+                padding: 28px 20px;
+            }
+
+            .signature-text {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="confirmation-wrapper">
+
+        <!-- Logo -->
+        <div class="conf-logo">
+            <a href="https://thevisiostudios.com">
+                <img src="https://www.dropbox.com/scl/fi/lyak0yhv6jl3kq175zzzn/Visio_No-Background-4x.png?rlkey=kgnj6oc8ydz31u7huysh9y60y&st=g88fsoz0&raw=1" alt="VISIO Studios">
+            </a>
+        </div>
+
+        <!-- Heading -->
+        <h1 class="conf-heading">You're in!</h1>
+
+        <!-- Confirmation text -->
+        <p class="conf-subtext">
+            Your discovery call with <strong>VISIO Studios</strong> is officially booked.<br>
+            We can't wait to learn about your agency and show you how we can help you scale.
+        </p>
+
+        <div class="conf-divider"></div>
+
+        <!-- What to expect -->
+        <div class="expect-card">
+            <h3>Here's What Happens Next</h3>
+            <ul class="expect-list">
+                <li>
+                    <span class="step-icon">1</span>
+                    <span><strong>Check your email</strong> — you'll receive a calendar invite with the call details and a link to join.</span>
+                </li>
+                <li>
+                    <span class="step-icon">2</span>
+                    <span><strong>Add it to your calendar</strong> — so you don't miss your spot. We keep our schedule tight.</span>
+                </li>
+                <li>
+                    <span class="step-icon">3</span>
+                    <span><strong>Come ready to talk</strong> — think about your monthly editing volume, the types of content you produce, and your biggest bottlenecks. That's it.</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Calendar nudge -->
+        <p class="calendar-nudge">
+            Before you leave this page, make sure you add this to your calendar<br>(trust us — you don't want to miss this).
+        </p>
+
+        <a href="#" class="calendar-link">
+            &#x1F449; Click here to add to your calendar &#x1F448;
+        </a>
+
+        <!-- PS -->
+        <p class="ps-note">
+            <strong>PS</strong> — We just sent you a confirmation email. Make sure you check it out so you're all set for the call. If you don't see it, check your spam folder.
+        </p>
+
+        <!-- Signature -->
+        <div class="signature-area">
+            <div class="signature-text">Maxine Gorospe</div>
+            <div class="signature-title">Founder, VISIO Studios</div>
+        </div>
+
+        <!-- Footer -->
+        <div class="conf-footer">
+            <p>&copy; 2025 VISIO Studios. All Rights Reserved. &nbsp;|&nbsp; <a href="https://thevisiostudios.com">thevisiostudios.com</a></p>
+        </div>
+
+    </div>
+
+</body>
+</html>
