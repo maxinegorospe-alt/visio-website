@@ -526,7 +526,8 @@ src="https://www.facebook.com/tr?id=806124832324167&ev=PageView&noscript=1"
   #splash-intro video { width: 100%; height: 100%; object-fit: cover; }
   body.splash-active { overflow: hidden; }
   @media (max-width:768px) {
-    #splash-intro video { object-fit: contain; }
+    #splash-intro { display: none !important; }
+    body.splash-active { overflow: auto; }
   }
 </style>
 </head>
@@ -1699,6 +1700,12 @@ document.addEventListener('DOMContentLoaded', initScrollAnimations);
   const splash = document.getElementById('splash-intro');
   const introVideo = document.getElementById('intro-video');
   if (!splash || !introVideo) return;
+  // Skip intro entirely on mobile
+  if (window.innerWidth <= 768) {
+    splash.remove();
+    document.body.classList.remove('splash-active');
+    return;
+  }
   var dismissed = false;
   function dismissSplash() {
     if (dismissed) return;
@@ -1717,7 +1724,7 @@ document.addEventListener('DOMContentLoaded', initScrollAnimations);
       // Video is playing — dismiss when it ends or after 10s max
       setTimeout(dismissSplash, 10000);
     }).catch(function() {
-      // Autoplay blocked (mobile/in-app browsers) — skip intro
+      // Autoplay blocked — skip intro
       dismissSplash();
     });
   } else {
