@@ -66,7 +66,7 @@ section{padding:100px 0}
 .hero-value{font-family:'Helvetica Neue','Helvetica','Arial',sans-serif;font-size:14px;color:#555;margin-top:8px;position:relative;z-index:1}
 .hero-value strong{color:var(--green)}
 .vsl-wrapper{position:relative;max-width:720px;margin:32px auto;border-radius:16px;overflow:hidden;border:2px solid rgba(74,45,107,0.15);box-shadow:0 8px 40px rgba(74,45,107,0.1)}
-.vsl-video{width:100%;display:block;aspect-ratio:16/9;background:var(--bg)}
+.vsl-video{width:100%;display:block;aspect-ratio:5/4;background:var(--bg)}
 .vsl-placeholder{position:absolute;top:0;left:0;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(74,45,107,0.85),rgba(40,37,37,0.95));cursor:pointer;gap:12px;transition:background 0.3s}
 .vsl-placeholder:hover{background:linear-gradient(135deg,rgba(74,45,107,0.9),rgba(40,37,37,0.85))}
 .vsl-play{width:64px;height:64px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;font-size:24px;color:#111;box-shadow:0 0 24px rgba(92,184,122,0.4)}
@@ -80,14 +80,14 @@ section{padding:100px 0}
 .positioning-body strong{color:var(--charcoal);font-weight:600}
 
 /* ===== PAIN POINTS ===== */
-.pain-section{background:var(--white);color:var(--charcoal);padding:100px 0}
+.pain-section{background:var(--white);color:var(--charcoal);padding:100px 0;text-align:center}
 .pain-section .section-label{color:var(--deep)}
 .pain-section .section-title{color:var(--charcoal)}
-.pain-layout{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:48px;align-items:center}
-.pain-quotes{display:flex;flex-direction:column;gap:20px}
+.pain-layout{margin-top:48px;display:flex;justify-content:center}
+.pain-quotes{display:flex;flex-direction:column;gap:20px;max-width:680px;text-align:left}
 .pain-quote{display:flex;align-items:flex-start;gap:14px;font-size:16px;color:#333;line-height:1.6}
 .pain-quote-icon{width:28px;height:28px;background:linear-gradient(135deg,var(--deep),#7B5EA7);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;color:var(--white);font-size:14px;font-weight:700}
-.pain-resolve{color:var(--green);font-weight:700;font-size:18px;margin-top:16px;font-family:'Swarsh Daisy','Georgia',serif}
+.pain-resolve{color:var(--green);font-weight:700;font-size:18px;margin-top:16px;font-family:'Swarsh Daisy','Georgia',serif;text-align:center}
 .pain-image{background:linear-gradient(135deg,var(--lav),var(--bg));border-radius:20px;height:400px;display:flex;align-items:center;justify-content:center;color:var(--purple);font-size:14px;letter-spacing:1px}
 
 /* ===== AGITATION ===== */
@@ -234,11 +234,18 @@ section{padding:100px 0}
 .proof-label{font-size:13px;color:var(--purple);margin-top:4px;font-weight:500}
 
 /* ===== TESTIMONIALS ===== */
+.stars{display:inline-flex;gap:4px}
+.stars span{color:#FFD700;font-size:20px;display:inline-block;animation:starPop 0.4s ease both}
+.stars span:nth-child(2){animation-delay:0.1s}
+.stars span:nth-child(3){animation-delay:0.2s}
+.stars span:nth-child(4){animation-delay:0.3s}
+.stars span:nth-child(5){animation-delay:0.4s}
+@keyframes starPop{0%{opacity:0;transform:scale(0) rotate(-30deg)}60%{transform:scale(1.3) rotate(5deg)}100%{opacity:1;transform:scale(1) rotate(0)}}
 .testimonials-section{background:var(--white);padding:80px 0}
 .testimonials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;margin-top:48px}
 .testimonial{background:var(--white);border:1px solid var(--glass-border);border-radius:20px;padding:32px;text-align:left;transition:all 0.3s;box-shadow:0 2px 12px rgba(74,45,107,0.05)}
 .testimonial:hover{border-color:var(--purple);transform:translateY(-2px)}
-.testimonial-result{font-family:'Swarsh Daisy','Georgia',serif;font-size:20px;font-weight:700;color:var(--green);margin-bottom:12px}
+.testimonial-result{font-family:'Swarsh Daisy','Georgia',serif;font-size:20px;font-weight:700;color:var(--deep);margin-bottom:12px}
 .testimonial p{font-size:14px;color:#555;line-height:1.8;font-style:italic;margin-bottom:16px}
 .testimonial-author{font-size:13px;color:var(--green);font-weight:600}
 .testimonial-role{font-size:11px;color:var(--purple)}
@@ -321,7 +328,7 @@ section{padding:60px 0}
 <span class="banner-dot"></span>
 Q4 Retainer Promo, Lock In The <span style="font-weight:800;text-decoration:underline;text-underline-offset:3px">Lowest Rates</span> of the Year
 <span class="banner-dot"></span>
-<span style="font-weight:800;text-decoration:underline;text-underline-offset:3px">Limited Spots</span> Available
+<span style="font-weight:800;text-decoration:underline;text-underline-offset:3px">10 Spots Only</span>
 </span>
 <a href="#pricing" class="banner-cta">Claim Your Spot</a>
 </div>
@@ -338,12 +345,12 @@ Q4 Retainer Promo, Lock In The <span style="font-weight:800;text-decoration:unde
 <!-- ========== HERO ========== -->
 <section class="hero">
 <div>
-<span class="hero-badge">Q4 Exclusive, Limited Retainer Spots</span>
+<span class="hero-badge">Q4 Exclusive, Only 10 Spots Available</span>
 <h1>Your Post-Production Team That Helps You <span class="highlight">Scale and Close More Deals</span></h1>
 <p class="hero-sub">We give media agencies the high-quality content and production system they need to take on more clients, deliver faster, and stop losing deals to overloaded workflows.</p>
 <div class="vsl-wrapper">
 <video class="vsl-video" controls playsinline preload="metadata" poster="">
-<source src="" type="video/mp4">
+<source src="https://dl.dropboxusercontent.com/scl/fi/twlu1nupe1ca2id14v4pg/What-we-build_5x4.mp4?rlkey=ycrwjor5iqmv6gnztu8804tmx&st=wcrwqna1" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 <div class="vsl-placeholder" id="vslPlaceholder">
@@ -381,7 +388,7 @@ Your browser does not support the video tag.
 <div class="container">
 <span class="section-label">Sound Familiar?</span>
 <h2 class="section-title" style="color:var(--charcoal)">Not Sure If VISIO Is Right for You?</h2>
-<p class="section-sub" style="color:#666">If any of these sound familiar, you're exactly who we built this for.</p>
+<p class="section-sub" style="color:#666;margin-left:auto;margin-right:auto">If any of these sound familiar, you're exactly who we built this for.</p>
 <div class="pain-layout">
 <div class="pain-quotes">
 <div class="pain-quote">
@@ -507,7 +514,7 @@ Your browser does not support the video tag.
 <div class="cd-block"><div class="cd-num" id="cd-secs">--</div><div class="cd-label">Seconds</div></div>
 </div>
 <a href="https://calendly.com/thevisiostudios/new-meeting" class="btn-primary">Book Your Strategy Call</a>
-<span class="btn-sub">Limited retainer spots, Q4 pricing only</span>
+<span class="btn-sub">Only 10 spots · Q4 pricing</span>
 </div>
 </section>
 
@@ -549,7 +556,7 @@ Your browser does not support the video tag.
 <div class="vd-category">
 <div class="vd-cat-header">
 <span class="vd-cat-title">Creative Direction &amp; Strategy</span>
-<span class="vd-cat-value">(Value: $2,500+/mo)</span>
+<span class="vd-cat-value">(Value: $1,500+/mo)</span>
 </div>
 <div class="vd-item">
 <div class="vd-item-left">
@@ -564,13 +571,6 @@ Your browser does not support the video tag.
 <div class="vd-item-desc">We build a comprehensive editing style guide for your brand, fonts, colors, motion templates, transitions, audio profiles, so every piece looks cohesive.</div>
 </div>
 <span class="vd-item-value">$2,000 one-time</span>
-</div>
-<div class="vd-item">
-<div class="vd-item-left">
-<div class="vd-item-name">Caption &amp; Copy Support</div>
-<div class="vd-item-desc">Captions formatted and styled to your brand spec on every video. No extra charge, no extra ask.</div>
-</div>
-<span class="vd-item-value">$750/mo</span>
 </div>
 </div>
 
@@ -604,7 +604,7 @@ Your browser does not support the video tag.
 
 <div class="vd-cta-row">
 <a href="https://calendly.com/thevisiostudios/new-meeting" class="btn-primary">Book Your Strategy Call, Lock In Q4 Rates</a>
-<p class="vd-cta-sub">Limited retainer spots available this quarter</p>
+<p class="vd-cta-sub">Only 10 spots available this quarter</p>
 </div>
 </div>
 </section>
@@ -762,9 +762,17 @@ We get it. Hiring an editing team is a big decision. That's why we created the S
 <div class="starter-header">
 <h3 class="starter-title">Starter Pack</h3>
 <div class="starter-pricing">
-<span class="starter-compare">10 Professional edits at $80 each = <s>$800</s></span>
+<div style="margin-bottom:16px">
+<span class="starter-compare" style="display:block;margin-bottom:6px">A single Professional edit starts at <strong style="color:var(--charcoal)">$120</strong></span>
+<span class="starter-compare" style="display:block">Most clients need 10–20 edits/month = <s style="color:rgba(0,0,0,0.35)">$1,200 – $2,400</s></span>
+</div>
+<div style="font-size:13px;color:var(--green);font-weight:700;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:4px">Q4 Promo Price</div>
 <div class="starter-price"><span class="currency">$</span>599</div>
-<span class="starter-note">One-time · No subscription · No commitment</span>
+<span class="starter-note" style="font-size:15px;color:var(--charcoal);font-weight:600">10 Professional edits + the full VISIO experience</span>
+<span class="starter-note" style="margin-top:6px">One-time · No subscription · No commitment</span>
+<div style="margin-top:12px;background:rgba(92,184,122,0.08);border:1px solid rgba(92,184,122,0.2);border-radius:8px;padding:8px 16px;display:inline-block">
+<span style="font-size:14px;color:var(--green);font-weight:700">You save $601</span><span style="font-size:13px;color:#555"> — that's 50% off à la carte pricing</span>
+</div>
 </div>
 </div>
 <div class="starter-features">
@@ -825,10 +833,10 @@ We get it. Hiring an editing team is a big decision. That's why we created the S
 <span class="section-label">What Our Clients Say</span>
 <h2 class="section-title" style="font-size:clamp(32px,4vw,48px);line-height:1.15;margin-bottom:24px">Don't Take Our Word For It</h2>
 <div style="display:flex;align-items:center;gap:8px;margin-bottom:20px">
-<span style="color:var(--green);font-size:20px">★★★★★</span>
+<span class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></span>
 </div>
-<p style="font-size:17px;line-height:1.7;color:var(--lav);margin-bottom:24px">"VISIO's post-production team helped me scale my video marketing business to a level I couldn't have reached on my own. The quality, the turnaround, the communication, it all just works. I stopped managing editors and started closing clients. They became an extension of my team."</p>
-<div class="testimonial-author" style="color:var(--white);font-weight:700;font-size:16px">— Jonathan Hsu</div>
+<p style="font-size:17px;line-height:1.7;color:#333;margin-bottom:24px">"VISIO's post-production team helped me scale my video marketing business to a level I couldn't have reached on my own. The quality, the turnaround, the communication, it all just works. I stopped managing editors and started closing clients. They became an extension of my team."</p>
+<div class="testimonial-author" style="color:var(--charcoal);font-weight:700;font-size:16px">— Jonathan Hsu</div>
 <div class="testimonial-role" style="color:var(--purple);font-size:14px">Focus Media</div>
 </div>
 <div style="flex:0 0 auto;width:280px">
@@ -844,7 +852,7 @@ Your browser does not support the video tag.
 <!-- MARC TESTIMONIAL -->
 <div class="testimonial" style="max-width:800px;margin:0 auto 40px;padding:40px 48px">
 <div style="display:flex;align-items:center;gap:8px;margin-bottom:16px">
-<span style="color:var(--green);font-size:18px">★★★★★</span>
+<span class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></span>
 </div>
 <div class="testimonial-result">Completely transformed my Video Marketing business</div>
 <p>"I've been using Visio for over six months now, and I genuinely can't imagine going back to managing edits any other way. From the very first project, the quality of their work blew me away. Turnaround times are consistently fast without ever sacrificing quality. Communication is seamless and professional. The editing itself is creative and polished, perfectly tailored for social media. Most importantly, it works. Since using Visio, I've seen a real boost in views and engagement across my content. If you're looking for a reliable, talented editing partner, stop searching. Visio is the real deal."</p>
@@ -856,7 +864,7 @@ Your browser does not support the video tag.
 <div class="testimonials-grid" style="grid-template-columns:repeat(2,1fr)">
 <div class="testimonial">
 <div style="display:flex;align-items:center;gap:8px;margin-bottom:16px">
-<span style="color:var(--green);font-size:18px">★★★★★</span>
+<span class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></span>
 </div>
 <div class="testimonial-result">True professionals who exceeded expectations</div>
 <p>"This team of true professionals exceeded our expectations! They arrived on time, actively listened to our ideas, and seamlessly integrated them into the shoot. I highly recommend them!"</p>
@@ -865,7 +873,7 @@ Your browser does not support the video tag.
 </div>
 <div class="testimonial">
 <div style="display:flex;align-items:center;gap:8px;margin-bottom:16px">
-<span style="color:var(--green);font-size:18px">★★★★★</span>
+<span class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></span>
 </div>
 <div class="testimonial-result">Professional, punctual, and helpful</div>
 <p>"They are good at what they do. Very punctual with time and very professional during our setup of meetings and schedules. Very helpful also on how to use the content since I'm not that techy."</p>
@@ -929,7 +937,7 @@ Your browser does not support the video tag.
 </div>
 <div style="text-align:center;margin-top:48px">
 <a href="https://calendly.com/thevisiostudios/new-meeting" class="btn-primary">Book Your Strategy Call</a>
-<span class="btn-sub">Limited retainer spots · Q4 pricing only</span>
+<span class="btn-sub">Only 10 spots · Q4 pricing only</span>
 </div>
 </div>
 </section>
@@ -940,7 +948,7 @@ Your browser does not support the video tag.
 <h2>Ready to Stop Compromising on Content?</h2>
 <p class="section-sub">Book a strategy call with me personally. I'll walk you through exactly how VISIO would plug into your agency, no pitch deck, no runaround. Just a real conversation about what your content could look like with a system behind it.</p>
 <a href="https://calendly.com/thevisiostudios/new-meeting" class="btn-primary">Book Your Strategy Call Now</a>
-<p class="final-urgency">Q4 RATES CLOSE DEC 31, LIMITED RETAINER SPOTS AVAILABLE</p>
+<p class="final-urgency">Q4 RATES CLOSE DEC 31, ONLY 10 SPOTS AVAILABLE</p>
 </div>
 </section>
 
