@@ -47,7 +47,7 @@ section{padding:100px 0}
 .section-title{font-family:'Swarsh Daisy','Georgia',serif;font-size:clamp(28px,4vw,44px);font-weight:700;line-height:1.15;letter-spacing:-0.5px}
 .section-sub{font-size:17px;color:#555;margin-top:14px;max-width:640px;font-weight:300;line-height:1.7}
 .highlight-text{color:var(--green);font-weight:700}
-.highlight-red{color:#C0392B;font-weight:700}
+.highlight-red{color:#000;font-weight:700;text-decoration:line-through;text-decoration-color:#C0392B;text-decoration-thickness:4px}
 .highlight-lilac{color:var(--lilac);font-weight:700}
 
 /* ===== HERO ===== */
@@ -67,8 +67,8 @@ section{padding:100px 0}
 .hero-value strong{color:var(--green)}
 .vsl-wrapper{position:relative;max-width:720px;margin:32px auto;border-radius:16px;overflow:hidden;border:2px solid rgba(74,45,107,0.15);box-shadow:0 8px 40px rgba(74,45,107,0.1)}
 .vsl-video{width:100%;display:block;aspect-ratio:5/4;background:var(--bg)}
-.vsl-placeholder{position:absolute;top:0;left:0;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(74,45,107,0.85),rgba(40,37,37,0.95));cursor:pointer;gap:12px;transition:background 0.3s}
-.vsl-placeholder:hover{background:linear-gradient(135deg,rgba(74,45,107,0.9),rgba(40,37,37,0.85))}
+.vsl-placeholder{position:absolute;top:0;left:0;width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(74,45,107,0.5),rgba(40,37,37,0.6));cursor:pointer;gap:12px;transition:background 0.3s}
+.vsl-placeholder:hover{background:linear-gradient(135deg,rgba(74,45,107,0.4),rgba(40,37,37,0.45))}
 .vsl-play{width:64px;height:64px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;font-size:24px;color:#111;box-shadow:0 0 24px rgba(92,184,122,0.4)}
 .vsl-placeholder span{font-size:14px;color:var(--lav);letter-spacing:0.5px}
 
@@ -201,7 +201,7 @@ section{padding:100px 0}
 .vt-actual-price{font-family:'Swarsh Daisy','Georgia',serif;font-size:56px;font-weight:800;color:var(--green)}
 .vt-actual-price .currency{font-size:28px;vertical-align:super}
 .vt-actual-note{font-size:13px;color:var(--purple);margin-top:4px}
-.starter-pack-card{max-width:560px;margin:48px auto 0;background:var(--white);border:2px solid var(--green);border-radius:24px;padding:40px 36px;text-align:center;position:relative;overflow:visible;box-shadow:0 4px 40px rgba(92,184,122,0.12)}
+.starter-pack-card{max-width:none;margin:0;background:var(--white);border:2px solid var(--green);border-radius:24px;padding:40px 36px;text-align:center;position:relative;overflow:visible;box-shadow:0 4px 40px rgba(92,184,122,0.12)}
 .starter-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--green);color:#111;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;padding:6px 20px;border-radius:20px;white-space:nowrap}
 .starter-header{margin-top:12px}
 .starter-title{font-family:'Swarsh Daisy','Georgia',serif;font-size:36px;font-weight:800;color:var(--charcoal);margin:0 0 8px}
@@ -295,28 +295,61 @@ footer a:hover{color:var(--green)}
 /* ===== RESPONSIVE ===== */
 @media(max-width:768px){
 .urgency-banner{font-size:12px;padding:10px 16px}
+.banner-cta{font-size:11px;padding:6px 14px}
 body{padding-top:60px}
 .hero{min-height:auto;padding:100px 20px 60px}
+.hero h1{letter-spacing:0}
 section{padding:60px 0}
+.container{padding:0 16px}
 .pain-layout{grid-template-columns:1fr}
 .pain-image{height:250px}
 .process-grid{grid-template-columns:1fr}
 .pricing{padding:80px 0}
-.pricing-grid{grid-template-columns:1fr}
+.pricing-grid{grid-template-columns:1fr;max-width:400px;margin-left:auto;margin-right:auto}
 .price-card{padding:32px 20px}
 .proof-stats{gap:24px}
+.proof-stat{flex:1 1 40%;text-align:center}
 .proof-num{font-size:36px}
 .countdown .cd-num{font-size:32px;width:60px;height:60px}
-.commitment-toggle{flex-direction:column;border-radius:16px;max-width:260px}
-.toggle-btn{border-radius:12px}
+.countdown{gap:10px}
+.commitment-toggle{flex-direction:column;border-radius:16px;max-width:280px}
+.toggle-btn{border-radius:12px;font-size:14px;padding:12px 16px}
 .founder-layout{grid-template-columns:1fr}
 .founder-image{max-width:100%}
 .bonus-card{flex-direction:column;text-align:center}
 .bonus-card .bonus-num{align-self:center}
 .vt-row{font-size:13px}
+.vd-cat-header{flex-direction:column;gap:4px;align-items:flex-start}
+.vd-item{flex-wrap:wrap;gap:4px}
 .starter-pack-card{padding:28px 20px}
 .starter-price{font-size:56px}
 .starter-features{grid-template-columns:1fr}
+.starter-layout{grid-template-columns:1fr!important;gap:24px!important;margin-top:32px!important}
+.video-slideshow{max-width:100%!important}
+.sale-ribbon{font-size:12px!important;padding:6px 32px!important;right:-32px!important;top:18px!important}
+.guarantee-box{padding:36px 20px}
+.testimonials-grid{grid-template-columns:1fr!important}
+.testimonial{padding:28px 20px!important}
+.different-highlight{font-size:18px;padding:24px 20px}
+.section-title{font-size:clamp(24px,6vw,40px)}
+.social-notif{left:12px;right:12px;max-width:none;bottom:12px}
+.faq-q{font-size:15px}
+.video-testimonial-layout{gap:24px!important;margin-bottom:40px!important}
+.video-testimonial-video{width:100%!important;max-width:320px!important;margin:0 auto!important}
+}
+@media(max-width:480px){
+.hero{padding:80px 16px 48px}
+.hero-sub{font-size:15px}
+.hero-note{font-size:11px}
+.proof-stats{flex-direction:column;align-items:center;gap:20px}
+.proof-stat{flex:none;width:100%}
+.cd-num{font-size:28px!important;width:52px!important;height:52px!important}
+.countdown{gap:8px}
+.starter-pack-card{padding:24px 16px}
+.price-card{padding:28px 16px}
+.btn-primary{font-size:15px;padding:16px 28px;width:100%;text-align:center}
+.btn-tier{width:100%;text-align:center}
+.commitment-toggle{max-width:100%}
 }
 </style>
 </head>
@@ -349,8 +382,8 @@ Q4 Retainer Promo, Lock In The <span style="font-weight:800;text-decoration:unde
 <h1>Your Post-Production Team That Helps You <span class="highlight">Scale and Close More Deals</span></h1>
 <p class="hero-sub">We give media agencies the high-quality content and production system they need to take on more clients, deliver faster, and stop losing deals to overloaded workflows.</p>
 <div class="vsl-wrapper">
-<video class="vsl-video" controls playsinline preload="metadata" poster="">
-<source src="https://dl.dropboxusercontent.com/scl/fi/twlu1nupe1ca2id14v4pg/What-we-build_5x4.mp4?rlkey=ycrwjor5iqmv6gnztu8804tmx&st=wcrwqna1" type="video/mp4">
+<video class="vsl-video" controls playsinline preload="auto">
+<source src="https://dl.dropboxusercontent.com/scl/fi/twlu1nupe1ca2id14v4pg/What-we-build_5x4.mp4?rlkey=ycrwjor5iqmv6gnztu8804tmx&st=wcrwqna1#t=1" type="video/mp4">
 Your browser does not support the video tag.
 </video>
 <div class="vsl-placeholder" id="vslPlaceholder">
@@ -659,6 +692,96 @@ Your browser does not support the video tag.
 </div>
 </section>
 
+<!-- ========== STARTER PACK ========== -->
+<section class="value-table-section">
+<div class="container">
+<span class="section-label">Try Before You Commit</span>
+<h2 class="section-title">Not Ready for a Retainer?</h2>
+<p style="max-width:600px;margin:16px auto 0;color:#555;font-size:17px;line-height:1.6">
+We get it. Hiring an editing team is a big decision. That's why we created the Starter Pack, 10 edits so you can experience VISIO's quality firsthand, zero long-term commitment.
+</p>
+
+<div class="starter-layout" style="display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start;max-width:1100px;margin:48px auto 0">
+
+<div class="starter-pack-card" style="margin:0;overflow:hidden">
+<div class="sale-ribbon" style="position:absolute;top:24px;right:-35px;background:#C0392B;color:#fff;font-weight:800;font-size:14px;letter-spacing:1px;padding:8px 40px;transform:rotate(45deg);box-shadow:0 2px 8px rgba(0,0,0,0.2);z-index:2;text-transform:uppercase">50% OFF</div>
+<div class="starter-badge">Most Popular Entry Point</div>
+<div class="starter-header">
+<h3 class="starter-title">Starter Pack</h3>
+<div class="starter-pricing">
+<div style="margin-bottom:16px">
+<span class="starter-compare" style="display:block;margin-bottom:8px;font-size:15px;color:#555">10 Professional edits × $120 each</span>
+<div style="display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap">
+<span class="starter-orig-price" style="font-family:'Swarsh Daisy','Georgia',serif;font-size:clamp(32px,8vw,48px);font-weight:800;color:#000;text-decoration:line-through;text-decoration-color:#C0392B;text-decoration-thickness:4px;line-height:1">$1,200</span>
+<span style="font-size:clamp(20px,5vw,28px);color:var(--green);font-weight:700">→</span>
+<span class="starter-promo-price" style="font-family:'Swarsh Daisy','Georgia',serif;font-size:clamp(48px,12vw,72px);font-weight:800;color:var(--green);line-height:1"><span style="font-size:clamp(22px,5vw,32px);vertical-align:super">$</span>599</span>
+</div>
+</div>
+<span class="starter-note" style="font-size:15px;color:var(--charcoal);font-weight:600">10 Professional edits + the full VISIO experience</span>
+<span class="starter-note" style="margin-top:6px">One-time · No subscription · No commitment</span>
+<div style="margin-top:16px;display:inline-flex;align-items:center;gap:0">
+<div style="background:#C0392B;color:#fff;font-weight:800;font-size:15px;padding:10px 16px;border-radius:6px 0 0 6px;letter-spacing:0.5px;white-space:nowrap">SAVE $601</div>
+<div style="background:#e8e0f0;padding:10px 16px;border-radius:0 6px 6px 0;font-size:13px;color:#333;white-space:nowrap">50% off à la carte pricing</div>
+</div>
+</div>
+</div>
+<div class="starter-features">
+<div class="starter-feature"><span class="vt-check">✓</span> 10 Professional video edits</div>
+<div class="starter-feature"><span class="vt-check">✓</span> Dedicated editor matched to your brand</div>
+<div class="starter-feature"><span class="vt-check">✓</span> Project alignment & creative direction session</div>
+<div class="starter-feature"><span class="vt-check">✓</span> QA/QC review on every deliverable</div>
+<div class="starter-feature"><span class="vt-check">✓</span> 2 revisions per project included</div>
+<div class="starter-feature"><span class="vt-check">✓</span> 48-hour standard turnaround</div>
+<div class="starter-feature"><span class="vt-check">✓</span> WhatsApp group with your editor & PM</div>
+</div>
+<a href="https://calendly.com/thevisiostudios/new-meeting" class="btn-primary" style="margin-top:28px;display:inline-block">Get Your Starter Pack</a>
+<span class="btn-sub" style="display:block;margin-top:10px">Book a call · We'll scope your first 10 edits together</span>
+</div>
+
+<div class="video-slideshow" style="position:relative;border-radius:16px;overflow:hidden;box-shadow:0 8px 40px rgba(74,45,107,0.12);align-self:center">
+<video id="vsVideo" controls playsinline loop preload="metadata" style="width:100%;display:block" src="https://www.dropbox.com/scl/fi/md72zii8r7m3uoq8ohedx/20-vs-120_6185-Buena-Vista.mp4?rlkey=ir2wf9rpse7h5spu8xud1owo6&st=g11agol5&raw=1"></video>
+<button onclick="slideVS(-1)" style="position:absolute;top:50%;left:12px;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:none;background:rgba(255,255,255,0.85);box-shadow:0 2px 10px rgba(0,0,0,0.15);cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;color:var(--charcoal);z-index:2">‹</button>
+<button onclick="slideVS(1)" style="position:absolute;top:50%;right:12px;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:none;background:rgba(255,255,255,0.85);box-shadow:0 2px 10px rgba(0,0,0,0.15);cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;color:var(--charcoal);z-index:2">›</button>
+<div style="position:absolute;bottom:12px;left:50%;transform:translateX(-50%);display:flex;gap:8px;z-index:2">
+<span class="vs-dot" style="width:8px;height:8px;border-radius:50%;background:#fff;cursor:pointer;transition:opacity 0.3s" onclick="goVS(0)"></span>
+<span class="vs-dot" style="width:8px;height:8px;border-radius:50%;background:#fff;opacity:0.4;cursor:pointer;transition:opacity 0.3s" onclick="goVS(1)"></span>
+<span class="vs-dot" style="width:8px;height:8px;border-radius:50%;background:#fff;opacity:0.4;cursor:pointer;transition:opacity 0.3s" onclick="goVS(2)"></span>
+<span class="vs-dot" style="width:8px;height:8px;border-radius:50%;background:#fff;opacity:0.4;cursor:pointer;transition:opacity 0.3s" onclick="goVS(3)"></span>
+<span class="vs-dot" style="width:8px;height:8px;border-radius:50%;background:#fff;opacity:0.4;cursor:pointer;transition:opacity 0.3s" onclick="goVS(4)"></span>
+</div>
+</div>
+<script>
+(function(){
+const vsSrcs=[
+"https://www.dropbox.com/scl/fi/md72zii8r7m3uoq8ohedx/20-vs-120_6185-Buena-Vista.mp4?rlkey=ir2wf9rpse7h5spu8xud1owo6&st=g11agol5&raw=1",
+"https://www.dropbox.com/scl/fi/mg542mow9yw0ou9as5vjo/Premium-Social-Media-Brandon-Banks-Ad3.mp4?rlkey=88bd63tzx9wlla95wb2hs7qrk&st=hqpa1pgj&raw=1",
+"https://www.dropbox.com/scl/fi/76r7i8752z70o0npo23g4/Premium-Listing-2170-Deer-Oak-Way.mp4?rlkey=5yi6i5eoq7cfcbjjrr75gg693&st=1hcs3w76&raw=1",
+"https://www.dropbox.com/scl/fi/rw54088h60ehi0mvnnfht/Before-and-after_2121-Divisadero.mp4?rlkey=hcfps6g5ywnwp6u24823iunnf&st=hmrmk0pi&raw=1",
+"https://www.dropbox.com/scl/fi/m96sq61caqj4a5joxaua4/Before-and-after-273-Dennis-Drive.mp4?rlkey=tvi3a9lhirs3l4nhfc0iyb3yu&st=i6ufxd4w&raw=1"
+];
+let vsIdx=0;
+const vid=document.getElementById('vsVideo');
+const dots=document.querySelectorAll('.vs-dot');
+function updateVS(){
+vid.src=vsSrcs[vsIdx];
+vid.load();vid.play().catch(()=>{});
+dots.forEach((d,i)=>{d.style.opacity=i===vsIdx?'1':'0.4'});
+}
+window.slideVS=function(d){vsIdx=(vsIdx+d+vsSrcs.length)%vsSrcs.length;updateVS()};
+window.goVS=function(i){vsIdx=i;updateVS()};
+})();
+</script>
+
+</div><!-- end starter-layout -->
+
+<div class="starter-upgrade">
+<div class="starter-upgrade-icon">↓</div>
+<p>Love the results? Upgrade to a monthly retainer and lock in your rate. Most clients move to a retainer within their first 10 edits.</p>
+</div>
+
+</div>
+</section>
+
 <!-- ========== PRICING ========== -->
 <section class="pricing" id="pricing">
 <div class="container">
@@ -666,7 +789,7 @@ Your browser does not support the video tag.
 <h2 class="section-title">Simple Pricing. Serious Results.</h2>
 <p class="pricing-intro">Pick the tier that matches your content volume. Lock in a longer commitment for the biggest savings.</p>
 <div class="commitment-toggle">
-<button class="toggle-btn active" onclick="setCommitment('m2m')">Month-to-Month</button>
+<button class="toggle-btn active" onclick="setCommitment('m2m')">Month-to-Month <span class="save-badge">SAVE 5%</span></button>
 <button class="toggle-btn" onclick="setCommitment('3mo')">3-Month <span class="save-badge">SAVE 12%</span></button>
 <button class="toggle-btn" onclick="setCommitment('6mo')">6-Month <span class="save-badge">SAVE 24%</span></button>
 </div>
@@ -676,7 +799,7 @@ Your browser does not support the video tag.
 <div class="price-card">
 <span class="price-tier">Growth</span>
 <div class="price-amount">
-<span class="price-original" id="growth-orig">$2,499/mo</span>
+<span class="price-original" id="growth-orig">$2,650/mo</span>
 <span class="price-current"><span class="currency">$</span><span id="growth-price">2,499</span></span>
 <span class="price-period">/month</span>
 </div>
@@ -699,7 +822,7 @@ Your browser does not support the video tag.
 <div class="price-card featured">
 <span class="price-tier">Scale</span>
 <div class="price-amount">
-<span class="price-original" id="scale-orig">$4,499/mo</span>
+<span class="price-original" id="scale-orig">$4,750/mo</span>
 <span class="price-current"><span class="currency">$</span><span id="scale-price">4,499</span></span>
 <span class="price-period">/month</span>
 </div>
@@ -721,7 +844,7 @@ Your browser does not support the video tag.
 <div class="price-card">
 <span class="price-tier">Enterprise</span>
 <div class="price-amount">
-<span class="price-original" id="ent-orig">$7,999/mo</span>
+<span class="price-original" id="ent-orig">$8,450/mo</span>
 <span class="price-current"><span class="currency">$</span><span id="ent-price">7,999</span></span>
 <span class="price-period">/month</span>
 </div>
@@ -742,54 +865,6 @@ Your browser does not support the video tag.
 </div>
 
 </div>
-</div>
-</section>
-
-<!-- ========== STARTER PACK ========== -->
-<section class="value-table-section">
-<div class="container">
-<span class="section-label">Try Before You Commit</span>
-<h2 class="section-title">Not Ready for a Retainer?</h2>
-<p style="max-width:600px;margin:16px auto 0;color:#555;font-size:17px;line-height:1.6">
-We get it. Hiring an editing team is a big decision. That's why we created the Starter Pack, 10 edits so you can experience VISIO's quality firsthand, zero long-term commitment.
-</p>
-
-<div class="starter-pack-card">
-<div class="starter-badge">Most Popular Entry Point</div>
-<div class="starter-header">
-<h3 class="starter-title">Starter Pack</h3>
-<div class="starter-pricing">
-<div style="margin-bottom:16px">
-<span class="starter-compare" style="display:block;margin-bottom:6px">A single Professional edit starts at <strong style="color:var(--charcoal)">$120</strong></span>
-<span class="starter-compare" style="display:block">Most clients need 10–20 edits/month = <s style="color:rgba(0,0,0,0.35)">$1,200 – $2,400</s></span>
-</div>
-<div style="font-size:13px;color:var(--green);font-weight:700;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:4px">Q4 Promo Price</div>
-<div class="starter-price"><span class="currency">$</span>599</div>
-<span class="starter-note" style="font-size:15px;color:var(--charcoal);font-weight:600">10 Professional edits + the full VISIO experience</span>
-<span class="starter-note" style="margin-top:6px">One-time · No subscription · No commitment</span>
-<div style="margin-top:12px;background:rgba(92,184,122,0.08);border:1px solid rgba(92,184,122,0.2);border-radius:8px;padding:8px 16px;display:inline-block">
-<span style="font-size:14px;color:var(--green);font-weight:700">You save $601</span><span style="font-size:13px;color:#555"> — that's 50% off à la carte pricing</span>
-</div>
-</div>
-</div>
-<div class="starter-features">
-<div class="starter-feature"><span class="vt-check">✓</span> 10 Professional video edits</div>
-<div class="starter-feature"><span class="vt-check">✓</span> Dedicated editor matched to your brand</div>
-<div class="starter-feature"><span class="vt-check">✓</span> Project alignment & creative direction session</div>
-<div class="starter-feature"><span class="vt-check">✓</span> QA/QC review on every deliverable</div>
-<div class="starter-feature"><span class="vt-check">✓</span> 2 revisions per project included</div>
-<div class="starter-feature"><span class="vt-check">✓</span> 48-hour standard turnaround</div>
-<div class="starter-feature"><span class="vt-check">✓</span> WhatsApp group with your editor & PM</div>
-</div>
-<a href="https://calendly.com/thevisiostudios/new-meeting" class="btn-primary" style="margin-top:28px;display:inline-block">Get Your Starter Pack</a>
-<span class="btn-sub" style="display:block;margin-top:10px">Book a call · We'll scope your first 10 edits together</span>
-</div>
-
-<div class="starter-upgrade">
-<div class="starter-upgrade-icon">↑</div>
-<p>Love the results? Upgrade to a monthly retainer and lock in your rate. Most clients move to a retainer within their first 10 edits.</p>
-</div>
-
 </div>
 </section>
 
@@ -825,7 +900,7 @@ We get it. Hiring an editing team is a big decision. That's why we created the S
 <div class="container">
 
 <!-- VIDEO TESTIMONIAL — SIDE BY SIDE -->
-<div style="display:flex;gap:48px;align-items:center;margin-bottom:56px;flex-wrap:wrap">
+<div class="video-testimonial-layout" style="display:flex;gap:48px;align-items:center;margin-bottom:56px;flex-wrap:wrap">
 <div style="flex:1;min-width:280px">
 <span class="section-label">What Our Clients Say</span>
 <h2 class="section-title" style="font-size:clamp(32px,4vw,48px);line-height:1.15;margin-bottom:24px">Don't Take Our Word For It</h2>
@@ -836,7 +911,7 @@ We get it. Hiring an editing team is a big decision. That's why we created the S
 <div class="testimonial-author" style="color:var(--charcoal);font-weight:700;font-size:16px">— Jonathan Hsu</div>
 <div class="testimonial-role" style="color:var(--purple);font-size:14px">Focus Media</div>
 </div>
-<div style="flex:0 0 auto;width:280px">
+<div class="video-testimonial-video" style="flex:0 0 auto;width:280px">
 <div style="border-radius:16px;overflow:hidden;background:#000;border:1px solid rgba(160,150,187,0.2);aspect-ratio:9/16">
 <video controls playsinline preload="metadata" style="width:100%;height:100%;object-fit:cover;display:block" poster="">
 <source src="https://dl.dropboxusercontent.com/scl/fi/x5bmkpe3elckmmo38disk/00-Jon-s-Testimonial.mp4?rlkey=baqrhidyxodfqoelrgocyyraz&st=v3mxsqe3" type="video/mp4">
@@ -958,12 +1033,13 @@ Your browser does not support the video tag.
 
 <!-- ========== SCRIPTS ========== -->
 <script>
-// VSL Play
+// VSL Play + Thumbnail
 (function(){
 const ph=document.getElementById('vslPlaceholder');
-if(ph){ph.addEventListener('click',function(){
 const v=document.querySelector('.vsl-video');
-if(v&&v.querySelector('source').src){ph.style.display='none';v.play()}
+if(v){v.addEventListener('loadedmetadata',function(){v.currentTime=1})}
+if(ph){ph.addEventListener('click',function(){
+if(v&&v.querySelector('source').src){ph.style.display='none';v.currentTime=0;v.play()}
 })}
 })();
 // Countdown Timer
@@ -983,7 +1059,7 @@ update();setInterval(update,1000);
 
 // Commitment Toggle + Pricing
 const prices={
-m2m:{growth:['2,499',''],scale:['4,499',''],ent:['7,999','']},
+m2m:{growth:['2,499','$2,650/mo'],scale:['4,499','$4,750/mo'],ent:['7,999','$8,450/mo']},
 '3mo':{growth:['2,199','$2,499/mo'],scale:['3,999','$4,499/mo'],ent:['6,999','$7,999/mo']},
 '6mo':{growth:['1,899','$2,499/mo'],scale:['3,499','$4,499/mo'],ent:['5,999','$7,999/mo']}
 };
