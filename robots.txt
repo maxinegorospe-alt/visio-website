@@ -1,0 +1,6 @@
+# Visio Studios — https://thevisiostudios.com
+User-agent: *
+Allow: /
+Disallow: /book/confirmed.html
+
+Sitemap: https://thevisiostudios.com/sitemap.xml
